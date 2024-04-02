@@ -10,6 +10,7 @@ import SearchBar from "../shared/SearchBar";
 import ServiceList from "../services/ServiceList";
 import FeaturedTourList from "../components/Featured-tours/FeaturedTourList";
 import experienceImg from "../assets/images/experience.png";
+import MasonryImagesGallery from "../components/Image-gallery/MasonryImagesGallery";
 
 const Home = () => {
   return (
@@ -126,6 +127,25 @@ const Home = () => {
         </Container>
       </section>
       {/* ======Experience Section End====== */}
+
+      {/* ======Gallery Section End====== */}
+      <section>
+        <Container>
+          <Row>
+            <Col lg="12">
+              <Subtitle subtitle={"Gallery"} />
+              <h2 className="gallery__titile">
+                Visit our customers tour gallery
+              </h2>
+            </Col>
+            <Col lg="12">
+              <MasonryImagesGallery />
+            </Col>
+          </Row>
+        </Container>
+      </section>
+
+      {/* ======Gallery Section End====== */}
     </>
   );
 };

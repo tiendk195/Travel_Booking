@@ -89,3 +89,16 @@
 .experience__img img {
   width: 90%;
 }
+
+.gallery__title {
+  font-size: 2.3rem;
+  margin-bottom: 2.5rem;
+  margin-top: 1rem;
+}
+.masonry__img {
+  transition: 0.3s;
+}
+
+.masonry__img:hover {
+  transform: scale(1.1);
+}
