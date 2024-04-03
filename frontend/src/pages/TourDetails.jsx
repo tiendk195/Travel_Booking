@@ -5,7 +5,8 @@ import { useParams } from "react-router-dom";
 import tourData from "../assets/data/tours";
 import caculatateAvgRating from "./../utils/avgRating";
 import avatar from "../assets/images/avatar.jpg";
-
+import Booking from "../components/Booking/Booking";
+import Newsletter from "../shared/Newsletter";
 const TourDetails = () => {
   const { id } = useParams();
   const reviewMsgRef = useRef("");
@@ -59,7 +60,7 @@ const TourDetails = () => {
                         class="ri-star-fill"
                         style={{ color: "var(--secondary-color)" }}
                       ></i>{" "}
-                      {caculatateAvgRating === 0 ? null : avgRating}
+                      {avgRating === 0 ? null : avgRating}
                       {totalRating === 0 ? (
                         "Not rated"
                       ) : (
@@ -168,10 +169,14 @@ const TourDetails = () => {
                 {/* =====tour review section end */}
               </div>
             </Col>
-            <Col lg="4"></Col>
+            <Col lg="4">
+              <Booking tour={tour} avgRating={avgRating} />
+            </Col>
           </Row>
         </Container>
       </section>
+
+      <Newsletter />
     </>
   );
 };
