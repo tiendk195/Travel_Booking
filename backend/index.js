@@ -4,6 +4,7 @@ import mongoose from "mongoose";
 import cors from "cors";
 import cookieParser from "cookie-parser";
 import tourRoute from "./routes/tours.js";
+import userRoute from "./routes/users.js";
 
 dotenv.config();
 const port = process.env.PORT || 9999;
@@ -29,6 +30,7 @@ app.use(cors());
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: false }));
 app.use("/tours", tourRoute);
+app.use("/users", userRoute);
 app.listen(port, () => {
   connect();
   console.log(`Server is running on port ${port}`);
