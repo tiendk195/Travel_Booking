@@ -6,17 +6,18 @@ import {
   updateUser,
   deleteUser,
 } from "./../controllers/userController.js";
+import { verifyUser, verifyAdmin } from "../utils/verifyToken.js";
 const router = express.Router();
 
 //create new user
-router.post("/", createUser);
+// router.post("/", createUser);
 //get all users
-router.get("/", getAllUsers);
+router.get("/", verifyAdmin, getAllUsers);
 //get Details of User
-router.get("/:id", getDetailsOfUser);
+router.get("/:id", verifyUser, getDetailsOfUser);
 //update user
-router.put("/:id", updateUser);
+router.put("/:id", verifyUser, updateUser);
 //delete user
-router.delete("/:id", deleteUser);
+router.delete("/:id", verifyUser, deleteUser);
 
 export default router;
