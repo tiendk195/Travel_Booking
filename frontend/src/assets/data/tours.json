@@ -1,14 +1,13 @@
 [
   {
-    "title": "Westminister Bridge",
+    "title": "Westminster Bridge",
     "city": "London",
-    "address": "Somewhere in London",
+    "address": "Westminster Bridge, London SW1A 2JH, United Kingdom",
     "distance": 300,
     "price": 99,
     "maxGroupSize": 10,
-    "desc": "this is the description",
+    "desc": "Westminster Bridge is a famous road-and-foot-traffic bridge over the River Thames in London. It is well-known for its stunning views of the Houses of Parliament, Big Ben, and the London Eye.",
     "reviews": [],
-
     "photo": "/tour-images/tour-img01.jpg",
     "featured": true
   },
@@ -19,9 +18,8 @@
     "distance": 400,
     "price": 99,
     "maxGroupSize": 8,
-    "desc": "this is the description",
+    "desc": "Bali is an Indonesian island known for its forested volcanic mountains, iconic rice paddies, beaches, and coral reefs. The island is also home to religious sites such as the cliffside Uluwatu Temple.",
     "reviews": [],
-
     "photo": "/tour-images/tour-img02.jpg",
     "featured": true
   },
@@ -32,9 +30,8 @@
     "distance": 500,
     "price": 99,
     "maxGroupSize": 8,
-    "desc": "this is the description",
+    "desc": "The Snowy Mountains, also known as the Alps of Thailand, offer breathtaking views and excellent trekking opportunities. Visitors can enjoy the cool climate and stunning scenery while exploring this natural wonder.",
     "reviews": [],
-
     "photo": "/tour-images/tour-img03.jpg",
     "featured": true
   },
@@ -45,9 +42,8 @@
     "distance": 500,
     "price": 99,
     "maxGroupSize": 8,
-    "desc": "this is the description",
+    "desc": "Experience the beauty of a Thai sunrise with this unforgettable tour. Watch as the sun rises over the horizon, casting a warm glow over the landscape and creating a magical atmosphere.",
     "reviews": [],
-
     "photo": "/tour-images/tour-img04.jpg",
     "featured": true
   },
@@ -58,9 +54,8 @@
     "distance": 500,
     "price": 99,
     "maxGroupSize": 8,
-    "desc": "this is the description",
+    "desc": "Nusa Penida is a beautiful island located southeast of Bali, known for its stunning beaches, rugged cliffs, and crystal-clear waters. Visitors can explore hidden caves, snorkel with manta rays, and relax on pristine white sand beaches.",
     "reviews": [],
-
     "photo": "/tour-images/tour-img05.jpg",
     "featured": true
   },
@@ -71,9 +66,8 @@
     "distance": 500,
     "price": 99,
     "maxGroupSize": 8,
-    "desc": "this is the description",
+    "desc": "Spring in Japan is a magical time when cherry blossoms (sakura) bloom across the country, transforming landscapes into a sea of pink and white flowers. Witness the beauty of cherry blossom season with this unforgettable tour.",
     "reviews": [],
-
     "photo": "/tour-images/tour-img06.jpg",
     "featured": true
   },
@@ -84,9 +78,8 @@
     "distance": 500,
     "price": 99,
     "maxGroupSize": 8,
-    "desc": "this is the description",
+    "desc": "Holmen Lofoten is a picturesque fishing village located on the Lofoten archipelago in Norway. Visitors can explore charming wooden houses, enjoy fresh seafood, and take in breathtaking views of the surrounding mountains and sea.",
     "reviews": [],
-
     "photo": "/tour-images/tour-img07.jpg",
     "featured": true
   },
@@ -97,9 +90,8 @@
     "distance": 500,
     "price": 99,
     "maxGroupSize": 8,
-    "desc": "this is the description",
+    "desc": "The Snowy Mountains, also known as the Alps of Thailand, offer breathtaking views and excellent trekking opportunities. Visitors can enjoy the cool climate and stunning scenery while exploring this natural wonder.",
     "reviews": [],
-
     "photo": "/tour-images/tour-img03.jpg",
     "featured": true
   },
@@ -110,9 +102,8 @@
     "distance": 100,
     "price": 99,
     "maxGroupSize": 5,
-    "desc": "this is the description",
+    "desc": "Jaflong is a hill station and tourist destination in the Division of Sylhet, Bangladesh. It is located in Gowainghat Upazila of Sylhet District and situated at the border between Bangladesh and the Indian state of Meghalaya, overshadowed by subtropical mountains and rainforests.",
     "reviews": [],
-
     "photo": "/tour-images/tour-img08.jpg",
     "featured": false
   },
@@ -123,9 +114,8 @@
     "distance": 500,
     "price": 99,
     "maxGroupSize": 8,
-    "desc": "this is the description",
+    "desc": "Cox's Bazar is a town on the southeast coast of Bangladesh. It's known for its very long, sandy beachfront, stretching from Sea Beach in the north to Kolatoli Beach in the south. ",
     "reviews": [],
-
     "photo": "/tour-images/tour-img09.jpg",
     "featured": false
   }
