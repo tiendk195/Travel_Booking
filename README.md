@@ -52,7 +52,7 @@ This project is designed to provide hands-on experience in building a Travel-Boo
 1. Clone the repository:
 
 ```bash
-git clone <repository-url>
+git clone <https://github.com/tiendk195/Travel_Booking>
 ```
 
 2. Navigate to the backend folder:
