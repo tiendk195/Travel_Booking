@@ -30,7 +30,9 @@ const connect = async () => {
     console.log(`Connect failed: ${error}`);
   }
 };
-
+app.get("/", (req, res) => {
+  res.send("App is running");
+});
 //middlewares
 app.use(express.json());
 app.use(cors(corsOptions));
