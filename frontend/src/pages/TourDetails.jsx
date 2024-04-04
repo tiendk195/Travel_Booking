@@ -25,7 +25,6 @@ const TourDetails = () => {
   const submitHandler = (e) => {
     e.preventDefault();
     const reviewText = reviewMsgRef.current.value;
-    // alert(`${reviewText}, ${tourRating}`);
   };
 
   //destructure properties from tour object
