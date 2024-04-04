@@ -10,7 +10,6 @@ const FeaturedTourList = () => {
     loading,
     error,
   } = useFetch(`${BASE_URL}/tours/search/getFeaturedTour`);
-  console.log(featuredTours);
   return (
     <>
       {loading && <h4 className="text-center pt-5">Loading.....</h4>}
