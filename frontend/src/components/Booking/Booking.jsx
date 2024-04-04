@@ -1,22 +1,27 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "./booking.css";
 import { Form, FormGroup, ListGroup, ListGroupItem, Button } from "reactstrap";
 import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../../context/AuthContext";
+import { BASE_URL } from "../../utils/config";
 
 const Booking = ({ tour, avgRating }) => {
-  const { price, reviews } = tour;
+  const { price, reviews, title } = tour;
 
   const navigate = useNavigate();
-  const [credentials, setCredentials] = useState({
-    userId: "01",
-    userEmail: "6YR2l@example.com",
+
+  const { user } = useContext(AuthContext);
+  const [booking, setBooking] = useState({
+    userId: user && user._id,
+    userEmail: user && user.email,
+    tourName: title,
     fullName: "",
     phone: "",
     guestSize: 1,
     bookAt: "",
   });
   const handleChange = (e) => {
-    setCredentials((prevState) => ({
+    setBooking((prevState) => ({
       ...prevState,
       [e.target.id]: e.target.value,
     }));
@@ -24,12 +29,33 @@ const Booking = ({ tour, avgRating }) => {
 
   const serviceFee = 10;
   const totalAmount =
-    Number(price) * Number(credentials.guestSize) + Number(serviceFee);
+    Number(price) * Number(booking.guestSize) + Number(serviceFee);
 
   //  send data to server
-  const handleClick = (e) => {
+  const handleClick = async (e) => {
     e.preventDefault();
-    // console.log(credentials);
+    console.log(booking);
+    try {
+      if (!user || user === null || user === undefined) {
+        alert("Please login to booking");
+        return;
+      }
+      const res = await fetch(`${BASE_URL}/booking`, {
+        method: "post",
+        headers: {
+          "content-type": "application/json",
+        },
+        credentials: "include",
+        body: JSON.stringify(booking),
+      });
+      const result = await res.json();
+      if (!res.ok) {
+        return alert(result.message);
+      }
+      alert(result.message);
+    } catch (error) {
+      alert(error.message);
+    }
     navigate("/thank-you");
   };
 
