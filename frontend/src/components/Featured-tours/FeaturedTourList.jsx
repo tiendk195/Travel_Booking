@@ -13,9 +13,8 @@ const FeaturedTourList = () => {
   console.log(featuredTours);
   return (
     <>
-      {loading && <h4>Loading......</h4>}
-
-      {error && <h4>{error}</h4>}
+      {loading && <h4 className="text-center pt-5">Loading.....</h4>}
+      {error && <h4 className="text-center pt-5">{error}</h4>}
 
       {!loading &&
         !error &&
