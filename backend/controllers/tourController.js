@@ -6,6 +6,7 @@ export const getAllTours = async (req, res) => {
   const page = parseInt(req.query.page);
   try {
     const tours = await Tour.find({})
+      .populate("reviews")
       .skip(page * 8)
       .limit(8);
     res.status(200).json({
@@ -26,7 +27,7 @@ export const getAllTours = async (req, res) => {
 //get Details of Tour
 export const getDetailsOfTour = async (req, res) => {
   try {
-    const tour = await Tour.findById(req.params.id);
+    const tour = await Tour.findById(req.params.id).populate("reviews");
     if (!tour) {
       return res.status(404).json({
         success: false,
@@ -130,7 +131,7 @@ export const getTourBySearch = async (req, res) => {
       city,
       distance: { $gte: distance },
       maxGroupSize: { $gte: maxGroupSize },
-    });
+    }).populate("reviews");
     if (!tours) {
       return res.status(404).json({
         success: false,
@@ -157,7 +158,9 @@ export const getFeaturedTour = async (req, res) => {
   try {
     const tours = await Tour.find({
       featured: true,
-    }).limit(8);
+    })
+      .populate("reviews")
+      .limit(8);
     if (!tours) {
       return res.status(404).json({
         success: false,

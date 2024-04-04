@@ -6,6 +6,7 @@ import cookieParser from "cookie-parser";
 import tourRoute from "./routes/tours.js";
 import userRoute from "./routes/users.js";
 import authRoute from "./routes/auth.js";
+import reviewRoute from "./routes/reviews.js";
 dotenv.config();
 const port = process.env.PORT || 9999;
 const app = express();
@@ -36,6 +37,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use("/tours", tourRoute);
 app.use("/users", userRoute);
 app.use("/auth", authRoute);
+app.use("/review", reviewRoute);
 
 app.listen(port, () => {
   connect();
