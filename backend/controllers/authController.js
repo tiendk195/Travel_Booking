@@ -1,9 +1,22 @@
 import User from "../models/User.js";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
+import {
+  loginValidator,
+  registerValidator,
+} from "../validation/authValidate.js";
 //register
 export const register = async (req, res) => {
   try {
+    const { error } = registerValidator.validate(req.body, {
+      abortEarly: false,
+    });
+    if (error) {
+      const errors = error.details.map((err) => err.message);
+      return res.status(400).json({
+        message: errors,
+      });
+    }
     const salt = bcrypt.genSaltSync(10);
     const hash = bcrypt.hashSync(req.body.password, salt);
     const newUser = new User({
@@ -32,6 +45,15 @@ export const register = async (req, res) => {
 export const login = async (req, res) => {
   const email = req.body.email;
   try {
+    const { error } = loginValidator.validate(req.body, {
+      abortEarly: false,
+    });
+    if (error) {
+      const errors = error.details.map((err) => err.message);
+      return res.status(400).json({
+        message: errors,
+      });
+    }
     const user = await User.findOne({ email });
     //if user is not found
     if (!user) {
