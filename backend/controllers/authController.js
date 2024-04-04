@@ -87,7 +87,7 @@ export const login = async (req, res) => {
         role: user.role,
       },
       process.env.JWT_SECRET_KEY,
-      { expiresIn: "5d" }
+      { expiresIn: "15d" }
     );
 
     //sent token to browser response to client

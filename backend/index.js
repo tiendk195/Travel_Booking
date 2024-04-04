@@ -7,6 +7,8 @@ import tourRoute from "./routes/tours.js";
 import userRoute from "./routes/users.js";
 import authRoute from "./routes/auth.js";
 import reviewRoute from "./routes/reviews.js";
+import bookingRoute from "./routes/bookings.js";
+
 dotenv.config();
 const port = process.env.PORT || 9999;
 const app = express();
@@ -38,6 +40,7 @@ app.use("/tours", tourRoute);
 app.use("/users", userRoute);
 app.use("/auth", authRoute);
 app.use("/review", reviewRoute);
+app.use("/booking", bookingRoute);
 
 app.listen(port, () => {
   connect();
