@@ -43,7 +43,7 @@ const Footer = () => {
           <Col lg="3">
             <div className="logo">
               <img src={logo} alt="" />
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <p>Travelling helps us to share the world with each other</p>
               <div className="social__links d-flex align-items-center gap-4">
                 <span>
                   <Link to="https://www.youtube.com/channel/UCmhJwK0zclBr5Qmv7HUkS5g">
@@ -108,7 +108,7 @@ const Footer = () => {
                   </span>
                   Address:
                 </h6>
-                <p className="mb-0">123 Street, New York, USA</p>
+                <p className="mb-0">Nam Dinh,Vietnam</p>
               </ListGroupItem>
 
               <ListGroupItem className="ps-0 border-0 d-flex align-items-center gap-3">
